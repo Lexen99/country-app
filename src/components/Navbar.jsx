@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isDarkMode ? "dark-mode" : ""}`}>
       <div className="elements-container">
-        <h3 className="app-name">The Flag App</h3>
+        <h3 className="app-name">Flag App</h3>
         <img className="techover-logo" src={logoColor} alt="" />
         <button className="dark-light-button" onClick={toggleDarkMode}>
           <FontAwesomeIcon
