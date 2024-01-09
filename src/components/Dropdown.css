@@ -1,0 +1,79 @@
+:root {
+    --background-color-light: white;
+    --text-color-light: black;
+
+    --background-color-dark: #2B3844;
+    --text-color-dark: #F2F2F2;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-header {
+    position: relative;
+    background-color: var(--background-color-light);
+    width: 170px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    padding-left: 15px;
+}
+
+.dropdown-header.dark-mode {
+    background-color: #2B3844;
+    color: var(--text-color-dark);
+}
+
+.dropdown-header::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+}
+
+.dropdown-options {
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    width: calc(100% - 15px);
+    background-color: var(--background-color-light);
+    padding-left: 15px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.dropdown-options.dark-mode {
+    background-color: #2B3844;
+    color: var(--text-color-dark);
+}
+
+.regions {
+    padding: 3px 0px;
+}
+
+.regions-container {
+    padding: 10px 0px;
+    background-color: var();
+}
+
+.regions-container.dark-mode {
+    background-color: #2B3844;
+}
+
+@media (max-width: 500px) {
+    .dropdown-header {
+        height: 45px;
+    }
+}

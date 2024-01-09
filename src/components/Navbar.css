@@ -1,0 +1,93 @@
+/** LIGHT/Dark MODE */
+:root {
+  --background-color-light: white;
+  --text-color-light: black;
+
+  --background-color-dark: #2b3844;
+  --text-color-dark: #f2f2f2;
+}
+
+.navbar {
+  max-width: 100vw;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-color-light);
+}
+
+.elements-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 83vw;
+  margin: auto;
+}
+
+.navbar.dark-mode {
+  background-color: #2b3844;
+}
+
+.app-name {
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 19.2px 0px;
+}
+
+.navbar.dark-mode .app-name {
+  color: var(--text-color-dark);
+}
+
+.techover-logo {
+  width: 150px;
+}
+
+.dark-light-button {
+  border: none;
+  background-color: white;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: 0px;
+  background-color: var(--background-color-light);
+}
+
+.navbar.dark-mode .dark-light-button {
+  background-color: #2b3844;
+  color: var(--text-color-dark);
+}
+
+@media (max-width: 650px) {
+  .techover-logo {
+    display: none;
+  }
+
+  .elements-container {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    max-width: 100%;
+    padding: 0px 10px;
+  }
+
+  .elements-container {
+    width: 80vw;
+  }
+
+  .app-name {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .dark-light-button {
+    font-size: 14px;
+    font-weight: 550;
+    letter-spacing: 1px;
+  }
+
+  .techover-logo {
+    display: none;
+  }
+}
