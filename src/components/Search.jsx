@@ -6,10 +6,15 @@ const Search = ({ onSearch }) => {
     const {isDarkMode} = useDarkMode();
     const [searchTerm, setSearchTerm] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        onSearch(searchTerm);
+    const handleChange = (e) => {
+      const newSearchTerm = e.target.value;
+      setSearchTerm(newSearchTerm);
+      onSearch(newSearchTerm);
     };
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+    }
 
   return (
     <form onSubmit={handleSubmit} >
@@ -19,7 +24,7 @@ const Search = ({ onSearch }) => {
           placeholder="Search for a country..."
           type="text"
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={handleChange}
         />
       </label>
     </form>
